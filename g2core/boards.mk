@@ -212,4 +212,14 @@ ifeq ("$(CONFIG)","pendulum")
     endif
     SETTINGS_FILE="settings_synthetos_pendulum_v2.h"
 endif
+
+##########
+# Studiomill configs:
+ifeq ("$(CONFIG)","studiomill")
+    ifeq ("$(BOARD)","NONE")
+        BOARD=gquintic-d
+    endif
+    SETTINGS_FILE="settings_studiomill_gquintic.h"
+endif
+
 include $(wildcard ./board/$(STAR).mk)
