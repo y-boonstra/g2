@@ -54,7 +54,7 @@
 // MOTOR 1
 #define M1_MOTOR_MAP                AXIS_X                  // {1ma: AXIS_X, AXIS_Y...
 #define M1_STEP_ANGLE               1.8                     // {1sa: degrees per step
-#define M1_TRAVEL_PER_REV           1.25                    // {1tr:  1.25 is a typical value for a screw axis
+#define M1_TRAVEL_PER_REV           3.75                    // {1tr:  1.25 is a typical value for a screw axis
 #define M1_MICROSTEPS               8                       // {1mi:  1,2,4,8,    16,32 (G2 ONLY)
 #define M1_STEPS_PER_UNIT           0                       // {1su:  steps to issue per unit of length or degrees of rotation
 #define M1_POLARITY                 0                       // {1po:  0=normal direction, 1=inverted direction
@@ -64,7 +64,7 @@
 // MOTOR 2
 #define M2_MOTOR_MAP                AXIS_Y
 #define M2_STEP_ANGLE               1.8
-#define M2_TRAVEL_PER_REV           40.00
+#define M2_TRAVEL_PER_REV           1.25
 #define M2_MICROSTEPS               8
 #define M2_STEPS_PER_UNIT           0
 #define M2_POLARITY                 0
@@ -93,45 +93,45 @@
 
 // X AXIS
 #define X_AXIS_MODE                 AXIS_STANDARD
-#define X_VELOCITY_MAX              10000.0                 // {xvm:  G0 max velocity in mm/min
-#define X_FEEDRATE_MAX              10000.0                 // {xfr:  G1 max feed rate in mm/min
+#define X_VELOCITY_MAX              1500.0                  // {xvm:  G0 max velocity in mm/min
+#define X_FEEDRATE_MAX              1500.0                  // {xfr:  G1 max feed rate in mm/min
 #define X_TRAVEL_MIN                0.0                     // {xtn:  minimum travel for soft limits
 #define X_TRAVEL_MAX                0.0                     // {xtm:  travel between switches or crashes
-#define X_JERK_MAX                  250.0                   // {xjm:
-#define X_JERK_HIGH_SPEED           1000.0                  // {xjh:
+#define X_JERK_MAX                  500.0                   // {xjm:
+#define X_JERK_HIGH_SPEED           500.0                   // {xjh:
 #define X_HOMING_INPUT              0                       // {xhi:  input used for homing or 0 to disable
 #define X_HOMING_DIRECTION          0                       // {xhd:  0=search moves negative, 1= search moves positive
-#define X_SEARCH_VELOCITY           500.0                   // {xsv:  minus means move to minimum switch
+#define X_SEARCH_VELOCITY           750.0                   // {xsv:  minus means move to minimum switch
 #define X_LATCH_VELOCITY            100.0                   // {xlv:  mm/min
 #define X_LATCH_BACKOFF             4.0                     // {xlb:  mm
 #define X_ZERO_BACKOFF              2.0                     // {xzb:  mm
 
 // Y AXIS
 #define Y_AXIS_MODE                 AXIS_STANDARD
-#define Y_VELOCITY_MAX              1000.0
-#define Y_FEEDRATE_MAX              1000.0
+#define Y_VELOCITY_MAX              420.0
+#define Y_FEEDRATE_MAX              420.0
 #define Y_TRAVEL_MIN                0.0
 #define Y_TRAVEL_MAX                0.0
-#define Y_JERK_MAX                  1000.0
-#define Y_JERK_HIGH_SPEED           1000.0
+#define Y_JERK_MAX                  500.0
+#define Y_JERK_HIGH_SPEED           500.0
 #define Y_HOMING_INPUT              0
 #define Y_HOMING_DIRECTION          0
-#define Y_SEARCH_VELOCITY           500.0
+#define Y_SEARCH_VELOCITY           210.0
 #define Y_LATCH_VELOCITY            100.0
 #define Y_LATCH_BACKOFF             4.0
 #define Y_ZERO_BACKOFF              2.0
 
 // Z AXIS
 #define Z_AXIS_MODE                 AXIS_STANDARD
-#define Z_VELOCITY_MAX              1000.0
-#define Z_FEEDRATE_MAX              1000.0
+#define Z_VELOCITY_MAX              2100.0
+#define Z_FEEDRATE_MAX              2100.0
 #define Z_TRAVEL_MAX                0.0
 #define Z_TRAVEL_MIN                0.0
 #define Z_JERK_MAX                  500.0
 #define Z_JERK_HIGH_SPEED           500.0
 #define Z_HOMING_INPUT              0
 #define Z_HOMING_DIRECTION          0
-#define Z_SEARCH_VELOCITY           250.0
+#define Z_SEARCH_VELOCITY           1050.0
 #define Z_LATCH_VELOCITY            25.0
 #define Z_LATCH_BACKOFF             4.0
 #define Z_ZERO_BACKOFF              2.0
