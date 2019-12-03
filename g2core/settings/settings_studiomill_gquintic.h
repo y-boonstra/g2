@@ -54,7 +54,7 @@
 // MOTOR 1
 #define M1_MOTOR_MAP                AXIS_X                  // {1ma: AXIS_X, AXIS_Y...
 #define M1_STEP_ANGLE               1.8                     // {1sa: degrees per step
-#define M1_TRAVEL_PER_REV           3.75                    // {1tr:  1.25 is a typical value for a screw axis
+#define M1_TRAVEL_PER_REV           4.00                    // {1tr:  1.25 is a typical value for a screw axis
 #define M1_MICROSTEPS               8                       // {1mi:  1,2,4,8,    16,32 (G2 ONLY)
 #define M1_STEPS_PER_UNIT           0                       // {1su:  steps to issue per unit of length or degrees of rotation
 #define M1_POLARITY                 0                       // {1po:  0=normal direction, 1=inverted direction
