@@ -112,7 +112,7 @@
 #define Y_TRAVEL_MAX                240.0
 #define Y_JERK_MAX                  250.0
 #define Y_JERK_HIGH_SPEED           250.0
-#define Y_HOMING_INPUT              3
+#define Y_HOMING_INPUT              0
 #define Y_HOMING_DIRECTION          0
 #define Y_SEARCH_VELOCITY           200.0
 #define Y_LATCH_VELOCITY            100.0
@@ -127,7 +127,7 @@
 #define Z_TRAVEL_MAX                125.0
 #define Z_JERK_MAX                  250.0
 #define Z_JERK_HIGH_SPEED           250.0
-#define Z_HOMING_INPUT              6
+#define Z_HOMING_INPUT              0
 #define Z_HOMING_DIRECTION          1
 #define Z_SEARCH_VELOCITY           500.0
 #define Z_LATCH_VELOCITY            25.0
@@ -170,35 +170,39 @@
 // Xmin
 #define DI1_ENABLED                 IO_ENABLED
 #define DI1_POLARITY                IO_ACTIVE_LOW     // Normally open
-#define DI1_ACTION                  INPUT_ACTION_LIMIT
+#define DI1_ACTION                  INPUT_ACTION_NONE
 #define DI1_EXTERNAL_NUMBER         1
 
 // Xmax
-#define DI2_ENABLED                 IO_ENABLED
+#define DI2_ENABLED                 IO_DISABLED
 #define DI2_POLARITY                IO_ACTIVE_LOW     // Normally open
-#define DI2_ACTION                  INPUT_ACTION_LIMIT
+#define DI2_ACTION                  INPUT_ACTION_NONE
 #define DI2_EXTERNAL_NUMBER         2
 
 // Ymin
-#define DI3_ENABLED                 IO_ENABLED
+#define DI3_ENABLED                 IO_DISABLED
 #define DI3_POLARITY                IO_ACTIVE_LOW     // Normally open
-#define DI3_ACTION                  INPUT_ACTION_LIMIT
+#define DI3_ACTION                  INPUT_ACTION_NONE
 #define DI3_EXTERNAL_NUMBER         3
 
 // Ymax
-#define DI4_ENABLED                 IO_ENABLED
+#define DI4_ENABLED                 IO_DISABLED
 #define DI4_POLARITY                IO_ACTIVE_LOW     // Normally open
-#define DI4_ACTION                  INPUT_ACTION_LIMIT
+#define DI4_ACTION                  INPUT_ACTION_NONE
 #define DI4_EXTERNAL_NUMBER         4
 
 // Zmin
-#define DI5_ENABLED                 IO_ENABLED
+#define DI5_ENABLED                 IO_DISABLED
 #define DI5_POLARITY                IO_ACTIVE_LOW     // Normally open
-#define DI5_ACTION                  INPUT_ACTION_LIMIT
+#define DI5_ACTION                  INPUT_ACTION_NONE
 #define DI5_EXTERNAL_NUMBER         5
 
 // Zmax
-#define DI6_ENABLED                 IO_ENABLED
+#define DI6_ENABLED                 IO_DISABLED
 #define DI6_POLARITY                IO_ACTIVE_LOW     // Normally open
-#define DI6_ACTION                  INPUT_ACTION_LIMIT
+#define DI6_ACTION                  INPUT_ACTION_NONE
 #define DI6_EXTERNAL_NUMBER         6
+
+#define DI7_ENABLED                 IO_DISABLED
+#define DI8_ENABLED                 IO_DISABLED
+#define DI9_ENABLED                 IO_DISABLED
