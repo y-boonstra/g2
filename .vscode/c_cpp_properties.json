@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "g2core",
+            "compileCommands": "",
+            "compilerPath": "/home/jc/git_repos/synthetos/g2/Motate/Tools/linux/gcc-arm-none-eabi-7-2018-q2-update/bin/arm-none-eabi-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}"
+                ]
+            },
+            "compilerArgs": [],
+            "includePath": [
+                "/home/jc/git_repos/synthetos/g2/Motate/Tools/linux/gcc-arm-none-eabi-5_4-2016q2/arm-none-eabi/include/c++/5.4.1/arm-none-eabi",
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "\"_DEBUG\",",
+                "\"UNICODE\",",
+                "\"_UNICODE\""
+            ]
+        }
+    ],
+    "version": 4
+}
