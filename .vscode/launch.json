@@ -33,7 +33,7 @@
             "preLaunchTask": "Build CONFIG=r7",
         },
         {
-            "name": "Debug fourcable",
+            "name": "Debug studiomill",
             "type": "cppdbg",
             "request": "launch",
             "miDebuggerPath": "${workspaceRoot}/Motate/Tools/linux/gcc-arm-none-eabi-7u2/bin/arm-none-eabi-gdb-py",

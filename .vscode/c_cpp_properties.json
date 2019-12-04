@@ -2,7 +2,7 @@
     "configurations": [
         {
             "name": "g2core",
-            "compileCommands": "",
+            "compileCommands": "${workspaceFolder}/Motate/MotateProject/motate/compile_commands.json",
             "compilerPath": "/home/jc/git_repos/synthetos/g2/Motate/Tools/linux/gcc-arm-none-eabi-7-2018-q2-update/bin/arm-none-eabi-gcc",
             "cStandard": "c11",
             "cppStandard": "c++17",
