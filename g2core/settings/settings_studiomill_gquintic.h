@@ -109,7 +109,7 @@
 #define Y_VELOCITY_MAX              300.0
 #define Y_FEEDRATE_MAX              300.0
 #define Y_TRAVEL_MIN                0.0
-#define Y_TRAVEL_MAX                240.0
+#define Y_TRAVEL_MAX                235.0
 #define Y_JERK_MAX                  250.0
 #define Y_JERK_HIGH_SPEED           250.0
 #define Y_HOMING_INPUT              3
@@ -124,7 +124,7 @@
 #define Z_VELOCITY_MAX              1500.0
 #define Z_FEEDRATE_MAX              1500.0
 #define Z_TRAVEL_MIN                0.0
-#define Z_TRAVEL_MAX                125.0
+#define Z_TRAVEL_MAX                138.0
 #define Z_JERK_MAX                  250.0
 #define Z_JERK_HIGH_SPEED           250.0
 #define Z_HOMING_INPUT              6
