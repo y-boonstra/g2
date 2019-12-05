@@ -81,12 +81,11 @@
 // MOTOR 4
 #define M4_MOTOR_MAP                AXIS_A
 #define M4_STEP_ANGLE               1.8
-#define M4_TRAVEL_PER_REV           360.0                   // in degrees if rotary axis (ABC)
+#define M4_TRAVEL_PER_REV           5.0 // Estimate from watching the motor vs axis markings
 #define M4_MICROSTEPS               8
 #define M4_STEPS_PER_UNIT           0
-#define M4_POLARITY                 0
-//#define M4_POWER_MODE               MOTOR_ALWAYS_POWERED // Just for now, until I get around to figuring out the rotary axis
-#define M4_POWER_MODE               MOTOR_DISABLED
+#define M4_POLARITY                 1
+#define M4_POWER_MODE               MOTOR_ALWAYS_POWERED
 #define M4_POWER_LEVEL              0.5
 
 // X AXIS
@@ -99,7 +98,7 @@
 #define X_JERK_HIGH_SPEED           500.0                   // {xjh:
 #define X_HOMING_INPUT              1                       // {xhi:  input used for homing or 0 to disable
 #define X_HOMING_DIRECTION          0                       // {xhd:  0=search moves negative, 1= search moves positive
-#define X_SEARCH_VELOCITY           500.0                   // {xsv:  minus means move to minimum switch
+#define X_SEARCH_VELOCITY           250.0                   // {xsv:  minus means move to minimum switch
 #define X_LATCH_VELOCITY            150.0                   // {xlv:  mm/min
 #define X_LATCH_BACKOFF             4.0                     // {xlb:  mm
 #define X_ZERO_BACKOFF              2.0                     // {xzb:  mm
@@ -134,33 +133,17 @@
 #define Z_LATCH_BACKOFF             4.0
 #define Z_ZERO_BACKOFF              2.0
 
-/***************************************************************************************
- * Rotary values can be chosen to make the motor react the same as X for testing
- * To calculate the speeds here, in Wolfram Alpha-speak:
- *
- *   c=2*pi*r, r=0.609, d=c/360, s=((S*60)/d), S=40 for s
- *
- * Change r to A_RADIUS, and S to the desired speed, in mm/s or mm/s/s/s.
- *
- * It will return s= as the value you want to enter.
- *
- * If the value is over 1 million, the code will divide it by 1 million,
- * so you have to pre-multiply it by 1000000.0. (The value is in millions, btw.)
- *
- * Note that you need floating point values to always have a .0 at the end!
- ***************************************************************************************/
-
 #define A_AXIS_MODE                 AXIS_RADIUS
-#define A_RADIUS                    (M1_TRAVEL_PER_REV/(2*3.14159628))
-#define A_VELOCITY_MAX              ((X_VELOCITY_MAX/M1_TRAVEL_PER_REV)*360) // set to the same speed as X axis
+#define A_RADIUS                    57.25
+#define A_VELOCITY_MAX              2000.0
 #define A_FEEDRATE_MAX              A_VELOCITY_MAX
 #define A_TRAVEL_MIN                -1.0                                     // min/max the same means infinite, no limit
 #define A_TRAVEL_MAX                -1.0
-#define A_JERK_MAX                  (X_JERK_MAX*(360/M1_TRAVEL_PER_REV))
+#define A_JERK_MAX                  150
 #define A_JERK_HIGH_SPEED           A_JERK_MAX
-#define A_HOMING_INPUT              0
+#define A_HOMING_INPUT              8
 #define A_HOMING_DIRECTION          0
-#define A_SEARCH_VELOCITY           (A_VELOCITY_MAX * 0.500)
+#define A_SEARCH_VELOCITY           250
 #define A_LATCH_VELOCITY            (A_VELOCITY_MAX * 0.100)
 #define A_LATCH_BACKOFF             5.0
 #define A_ZERO_BACKOFF              2.0
@@ -204,5 +187,11 @@
 #define DI6_EXTERNAL_NUMBER         6
 
 #define DI7_ENABLED                 IO_DISABLED
-#define DI8_ENABLED                 IO_DISABLED
+//#define DI8_ENABLED                 IO_DISABLED
 #define DI9_ENABLED                 IO_DISABLED
+
+// A Home
+#define DI8_ENABLED                 IO_ENABLED
+#define DI8_POLARITY                IO_ACTIVE_LOW
+#define DI8_ACTION                  INPUT_ACTION_STOP
+#define DI8_EXTERNAL_NUMBER         8
