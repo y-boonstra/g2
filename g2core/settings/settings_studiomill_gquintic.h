@@ -170,37 +170,37 @@
 // Xmin
 #define DI1_ENABLED                 IO_ENABLED
 #define DI1_POLARITY                IO_ACTIVE_HIGH
-#define DI1_ACTION                  INPUT_ACTION_NONE
+#define DI1_ACTION                  INPUT_ACTION_STOP
 #define DI1_EXTERNAL_NUMBER         1
 
 // Xmax
 #define DI2_ENABLED                 IO_ENABLED
 #define DI2_POLARITY                IO_ACTIVE_HIGH
-#define DI2_ACTION                  INPUT_ACTION_NONE
+#define DI2_ACTION                  INPUT_ACTION_STOP
 #define DI2_EXTERNAL_NUMBER         2
 
 // Ymin
 #define DI3_ENABLED                 IO_ENABLED
 #define DI3_POLARITY                IO_ACTIVE_HIGH
-#define DI3_ACTION                  INPUT_ACTION_NONE
+#define DI3_ACTION                  INPUT_ACTION_STOP
 #define DI3_EXTERNAL_NUMBER         3
 
 // Ymax
 #define DI4_ENABLED                 IO_ENABLED
 #define DI4_POLARITY                IO_ACTIVE_HIGH
-#define DI4_ACTION                  INPUT_ACTION_NONE
+#define DI4_ACTION                  INPUT_ACTION_STOP
 #define DI4_EXTERNAL_NUMBER         4
 
 // Zmin
-#define DI5_ENABLED                 IO_DISABLED
+#define DI5_ENABLED                 IO_ENABLED
 #define DI5_POLARITY                IO_ACTIVE_HIGH
-#define DI5_ACTION                  INPUT_ACTION_NONE
+#define DI5_ACTION                  INPUT_ACTION_STOP
 #define DI5_EXTERNAL_NUMBER         5
 
 // Zmax
-#define DI6_ENABLED                 IO_DISABLED
+#define DI6_ENABLED                 IO_ENABLED
 #define DI6_POLARITY                IO_ACTIVE_HIGH
-#define DI6_ACTION                  INPUT_ACTION_NONE
+#define DI6_ACTION                  INPUT_ACTION_STOP
 #define DI6_EXTERNAL_NUMBER         6
 
 #define DI7_ENABLED                 IO_DISABLED
