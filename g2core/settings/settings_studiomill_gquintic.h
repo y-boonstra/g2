@@ -137,14 +137,16 @@
 #define A_RADIUS                    57.25
 #define A_VELOCITY_MAX              2000.0
 #define A_FEEDRATE_MAX              A_VELOCITY_MAX
-#define A_TRAVEL_MIN                -1.0                                     // min/max the same means infinite, no limit
-#define A_TRAVEL_MAX                -1.0
+#define A_TRAVEL_MIN                -370.0                                    // Can't do -1.0 for these, else homing A axis breaks
+#define A_TRAVEL_MAX                370.0
+//#define A_TRAVEL_MIN                -1.0                                     // min/max the same means infinite, no limit
+//#define A_TRAVEL_MAX                -1.0
 #define A_JERK_MAX                  150
 #define A_JERK_HIGH_SPEED           A_JERK_MAX
 #define A_HOMING_INPUT              8
 #define A_HOMING_DIRECTION          0
-#define A_SEARCH_VELOCITY           250
-#define A_LATCH_VELOCITY            (A_VELOCITY_MAX * 0.100)
+#define A_SEARCH_VELOCITY           (A_VELOCITY_MAX * 0.5)
+#define A_LATCH_VELOCITY            (A_VELOCITY_MAX * 0.1)
 #define A_LATCH_BACKOFF             5.0
 #define A_ZERO_BACKOFF              2.0
 
@@ -193,5 +195,5 @@
 // A Home
 #define DI8_ENABLED                 IO_ENABLED
 #define DI8_POLARITY                IO_ACTIVE_LOW
-#define DI8_ACTION                  INPUT_ACTION_STOP
+#define DI8_ACTION                  INPUT_ACTION_NONE
 #define DI8_EXTERNAL_NUMBER         8
