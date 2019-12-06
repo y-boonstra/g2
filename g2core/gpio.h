@@ -35,7 +35,7 @@
 #include "report.h"  // for sr triggering
 #include "canonical_machine.h" // for pin-change function/action handling
 
-// Note: "board_gpio.h" is inlcluded at the end of this file
+// Note: "board_gpio.h" is included at the end of this file
 
 #include <utility> // for std::forward
 
