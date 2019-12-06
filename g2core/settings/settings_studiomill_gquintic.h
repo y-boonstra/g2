@@ -143,7 +143,7 @@
 //#define A_TRAVEL_MAX                -1.0
 #define A_JERK_MAX                  150
 #define A_JERK_HIGH_SPEED           A_JERK_MAX
-#define A_HOMING_INPUT              8
+#define A_HOMING_INPUT              7
 #define A_HOMING_DIRECTION          0
 #define A_SEARCH_VELOCITY           (A_VELOCITY_MAX * 0.5)
 #define A_LATCH_VELOCITY            (A_VELOCITY_MAX * 0.1)
@@ -188,12 +188,11 @@
 #define DI6_ACTION                  INPUT_ACTION_STOP
 #define DI6_EXTERNAL_NUMBER         6
 
-#define DI7_ENABLED                 IO_DISABLED
-//#define DI8_ENABLED                 IO_DISABLED
-#define DI9_ENABLED                 IO_DISABLED
-
 // A Home
-#define DI8_ENABLED                 IO_ENABLED
-#define DI8_POLARITY                IO_ACTIVE_LOW
-#define DI8_ACTION                  INPUT_ACTION_NONE
-#define DI8_EXTERNAL_NUMBER         8
+#define DI7_ENABLED                 IO_ENABLED
+#define DI7_POLARITY                IO_ACTIVE_LOW
+#define DI7_ACTION                  INPUT_ACTION_NONE
+#define DI7_EXTERNAL_NUMBER         7
+
+#define DI8_ENABLED                 IO_DISABLED
+#define DI9_ENABLED                 IO_DISABLED
