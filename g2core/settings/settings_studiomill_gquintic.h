@@ -58,7 +58,7 @@
 #define M1_STEP_ANGLE               1.8                     // {1sa: degrees per step
 #define M1_TRAVEL_PER_REV           4.0                     // {1tr:  1.25 is a typical value for a screw axis
 #define M1_MICROSTEPS               8                       // {1mi:  1,2,4,8,    16,32 (G2 ONLY)
-#define M1_POLARITY                 0                       // {1po:  0=normal direction, 1=inverted direction
+#define M1_POLARITY                 1                       // {1po:  0=normal direction, 1=inverted direction
 #define M1_POWER_MODE               MOTOR_ALWAYS_POWERED    // {1pm:  MOTOR_DISABLED, MOTOR_ALWAYS_POWERED, MOTOR_POWERED_IN_CYCLE, MOTOR_POWERED_ONLY_WHEN_MOVING
 #define M1_POWER_LEVEL              0.5                     // {1pl:   0.0=no power, 1.0=max power
 
@@ -67,7 +67,7 @@
 #define M2_STEP_ANGLE               1.8
 #define M2_TRAVEL_PER_REV           1.0
 #define M2_MICROSTEPS               8
-#define M2_POLARITY                 1
+#define M2_POLARITY                 0
 #define M2_POWER_MODE               MOTOR_ALWAYS_POWERED
 #define M2_POWER_LEVEL              0.5
 
@@ -76,7 +76,7 @@
 #define M3_STEP_ANGLE               1.8
 #define M3_TRAVEL_PER_REV           4.1
 #define M3_MICROSTEPS               8
-#define M3_POLARITY                 0
+#define M3_POLARITY                 1
 #define M3_POWER_MODE               MOTOR_ALWAYS_POWERED
 #define M3_POWER_LEVEL              0.5
 
@@ -86,7 +86,7 @@
 #define M4_TRAVEL_PER_REV           5.0 // Estimate from watching the motor vs axis markings
 #define M4_MICROSTEPS               8
 #define M4_STEPS_PER_UNIT           0
-#define M4_POLARITY                 1
+#define M4_POLARITY                 0
 #define M4_POWER_MODE               MOTOR_ALWAYS_POWERED
 #define M4_POWER_LEVEL              0.5
 
@@ -95,7 +95,7 @@
 
 // X AXIS
 #define X_AXIS_MODE                 AXIS_STANDARD
-#define X_VELOCITY_MAX              1500.0                  // {xvm:  G0 max velocity in mm/min
+#define X_VELOCITY_MAX              3500.0                  // {xvm:  G0 max velocity in mm/min
 #define X_FEEDRATE_MAX              1500.0                  // {xfr:  G1 max feed rate in mm/min
 #define X_TRAVEL_MIN                0.0                     // {xtn:  minimum travel for soft limits
 #define X_TRAVEL_MAX                165.0                   // {xtm:  travel between switches or crashes
@@ -105,12 +105,12 @@
 #define X_HOMING_DIRECTION          0                       // {xhd:  0=search moves negative, 1= search moves positive
 #define X_SEARCH_VELOCITY           250.0                   // {xsv:  minus means move to minimum switch
 #define X_LATCH_VELOCITY            150.0                   // {xlv:  mm/min
-#define X_LATCH_BACKOFF             4.0                     // {xlb:  mm
+#define X_LATCH_BACKOFF             5.0                     // {xlb:  mm
 #define X_ZERO_BACKOFF              2.0                     // {xzb:  mm
 
 // Y AXIS
 #define Y_AXIS_MODE                 AXIS_STANDARD
-#define Y_VELOCITY_MAX              300.0
+#define Y_VELOCITY_MAX              700.0
 #define Y_FEEDRATE_MAX              300.0
 #define Y_TRAVEL_MIN                0.0
 #define Y_TRAVEL_MAX                235.0
@@ -120,12 +120,12 @@
 #define Y_HOMING_DIRECTION          0
 #define Y_SEARCH_VELOCITY           250.0
 #define Y_LATCH_VELOCITY            150.0
-#define Y_LATCH_BACKOFF             4.0
+#define Y_LATCH_BACKOFF             5.0
 #define Y_ZERO_BACKOFF              2.0
 
 // Z AXIS
 #define Z_AXIS_MODE                 AXIS_STANDARD
-#define Z_VELOCITY_MAX              1500.0
+#define Z_VELOCITY_MAX              9500.0
 #define Z_FEEDRATE_MAX              1500.0
 #define Z_TRAVEL_MIN                -138.0
 #define Z_TRAVEL_MAX                0
@@ -133,15 +133,15 @@
 #define Z_JERK_HIGH_SPEED           250.0
 #define Z_HOMING_INPUT              6
 #define Z_HOMING_DIRECTION          1
-#define Z_SEARCH_VELOCITY           750.0
+#define Z_SEARCH_VELOCITY           450.0
 #define Z_LATCH_VELOCITY            150.0
-#define Z_LATCH_BACKOFF             4.0
+#define Z_LATCH_BACKOFF             5.0
 #define Z_ZERO_BACKOFF              2.0
 
 // A AXIS
 #define A_AXIS_MODE                 AXIS_RADIUS
 #define A_RADIUS                    57.25
-#define A_VELOCITY_MAX              2000.0
+#define A_VELOCITY_MAX              12000.0
 #define A_FEEDRATE_MAX              A_VELOCITY_MAX
 #define A_TRAVEL_MIN                -370.0                                    // Can't do -1.0 for these, else homing A axis breaks
 #define A_TRAVEL_MAX                370.0
