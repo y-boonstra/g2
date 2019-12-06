@@ -122,8 +122,8 @@
 #define Z_AXIS_MODE                 AXIS_STANDARD
 #define Z_VELOCITY_MAX              1500.0
 #define Z_FEEDRATE_MAX              1500.0
-#define Z_TRAVEL_MIN                0.0
-#define Z_TRAVEL_MAX                138.0
+#define Z_TRAVEL_MIN                -138.0
+#define Z_TRAVEL_MAX                0
 #define Z_JERK_MAX                  250.0
 #define Z_JERK_HIGH_SPEED           250.0
 #define Z_HOMING_INPUT              6
