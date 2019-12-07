@@ -151,8 +151,8 @@
 #define A_JERK_HIGH_SPEED           A_JERK_MAX
 #define A_HOMING_INPUT              7
 #define A_HOMING_DIRECTION          0
-#define A_SEARCH_VELOCITY           (A_VELOCITY_MAX * 0.5)
-#define A_LATCH_VELOCITY            (A_VELOCITY_MAX * 0.1)
+#define A_SEARCH_VELOCITY           1200.0
+#define A_LATCH_VELOCITY            150.0
 #define A_LATCH_BACKOFF             5.0
 #define A_ZERO_BACKOFF              2.0
 
