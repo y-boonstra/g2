@@ -81,7 +81,7 @@
 #define M3_POWER_LEVEL              0.5
 
 // MOTOR 4
-#define M4_MOTOR_MAP                AXIS_A
+#define M4_MOTOR_MAP                AXIS_B
 #define M4_STEP_ANGLE               1.8
 #define M4_TRAVEL_PER_REV           5.0 // Estimate from watching the motor vs axis markings
 #define M4_MICROSTEPS               8
@@ -138,23 +138,23 @@
 #define Z_LATCH_BACKOFF             5.0
 #define Z_ZERO_BACKOFF              2.0
 
-// A AXIS
-#define A_AXIS_MODE                 AXIS_RADIUS
-#define A_RADIUS                    57.25
-#define A_VELOCITY_MAX              12000.0
-#define A_FEEDRATE_MAX              A_VELOCITY_MAX
-#define A_TRAVEL_MIN                -370.0                                    // Can't do -1.0 for these, else homing A axis breaks
-#define A_TRAVEL_MAX                370.0
-//#define A_TRAVEL_MIN                -1.0                                     // min/max the same means infinite, no limit
-//#define A_TRAVEL_MAX                -1.0
-#define A_JERK_MAX                  150
-#define A_JERK_HIGH_SPEED           A_JERK_MAX
-#define A_HOMING_INPUT              7
-#define A_HOMING_DIRECTION          0
-#define A_SEARCH_VELOCITY           1200.0
-#define A_LATCH_VELOCITY            150.0
-#define A_LATCH_BACKOFF             5.0
-#define A_ZERO_BACKOFF              2.0
+// B AXIS
+#define B_AXIS_MODE                 AXIS_RADIUS
+#define B_RADIUS                    57.25
+#define B_VELOCITY_MAX              12000.0
+#define B_FEEDRATE_MAX              B_VELOCITY_MAX
+#define B_TRAVEL_MIN                -370.0                                    // Can't do -1.0 for these, else homing the axis breaks
+#define B_TRAVEL_MAX                370.0
+//#define B_TRAVEL_MIN                -1.0                                     // min/max the same means infinite, no limit
+//#define B_TRAVEL_MAX                -1.0
+#define B_JERK_MAX                  150
+#define B_JERK_HIGH_SPEED           B_JERK_MAX
+#define B_HOMING_INPUT              7
+#define B_HOMING_DIRECTION          0
+#define B_SEARCH_VELOCITY           1200.0
+#define B_LATCH_VELOCITY            150.0
+#define B_LATCH_BACKOFF             5.0
+#define B_ZERO_BACKOFF              2.0
 
 
 // * Switches *
@@ -195,7 +195,7 @@
 #define DI6_ACTION                  INPUT_ACTION_STOP
 #define DI6_EXTERNAL_NUMBER         6
 
-// A Home
+// B Home
 #define DI7_ENABLED                 IO_ENABLED
 #define DI7_POLARITY                NORMALLY_OPEN
 #define DI7_ACTION                  INPUT_ACTION_NONE
