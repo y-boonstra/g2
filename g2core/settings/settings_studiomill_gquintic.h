@@ -59,7 +59,7 @@
 #define M1_TRAVEL_PER_REV           4.0                     // {1tr:  1.25 is a typical value for a screw axis
 #define M1_MICROSTEPS               8                       // {1mi:  1,2,4,8,    16,32 (G2 ONLY)
 #define M1_POLARITY                 1                       // {1po:  0=normal direction, 1=inverted direction
-#define M1_POWER_MODE               MOTOR_ALWAYS_POWERED    // {1pm:  MOTOR_DISABLED, MOTOR_ALWAYS_POWERED, MOTOR_POWERED_IN_CYCLE, MOTOR_POWERED_ONLY_WHEN_MOVING
+#define M1_POWER_MODE               MOTOR_POWERED_IN_CYCLE  // {1pm:  MOTOR_DISABLED, MOTOR_ALWAYS_POWERED, MOTOR_POWERED_IN_CYCLE, MOTOR_POWERED_ONLY_WHEN_MOVING
 #define M1_POWER_LEVEL              0.5                     // {1pl:   0.0=no power, 1.0=max power
 
 // MOTOR 2
@@ -68,7 +68,7 @@
 #define M2_TRAVEL_PER_REV           1.0
 #define M2_MICROSTEPS               8
 #define M2_POLARITY                 0
-#define M2_POWER_MODE               MOTOR_ALWAYS_POWERED
+#define M2_POWER_MODE               MOTOR_POWERED_IN_CYCLE
 #define M2_POWER_LEVEL              0.5
 
 // MOTOR 3
@@ -77,7 +77,7 @@
 #define M3_TRAVEL_PER_REV           4.1
 #define M3_MICROSTEPS               8
 #define M3_POLARITY                 1
-#define M3_POWER_MODE               MOTOR_ALWAYS_POWERED
+#define M3_POWER_MODE               MOTOR_POWERED_IN_CYCLE
 #define M3_POWER_LEVEL              0.5
 
 // MOTOR 4
@@ -88,7 +88,7 @@
 #define M4_MICROSTEPS               8
 #define M4_STEPS_PER_UNIT           0
 #define M4_POLARITY                 1
-#define M4_POWER_MODE               MOTOR_ALWAYS_POWERED
+#define M4_POWER_MODE               MOTOR_POWERED_IN_CYCLE
 #define M4_POWER_LEVEL              1.0
 
 
