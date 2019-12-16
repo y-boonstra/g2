@@ -81,9 +81,9 @@
 #define M3_POWER_LEVEL              0.5
 
 // MOTOR 4
-#define M4_MOTOR_MAP                AXIS_B
+#define M4_MOTOR_MAP                AXIS_A
 #define M4_STEP_ANGLE               1.8
-#define M4_TRAVEL_PER_REV           5.634 // Seems ~reasonably accurate for the Sherline 3700 rotary
+#define M4_TRAVEL_PER_REV           5.634 // Seems ~reasonably accurate for the Sherline 3700 rotary table
 //#define M4_TRAVEL_PER_REV           5.0 // Estimate from watching the motor vs axis markings
 #define M4_MICROSTEPS               8
 #define M4_STEPS_PER_UNIT           0
@@ -148,7 +148,7 @@
 #define A_TRAVEL_MAX                370.0
 //#define A_TRAVEL_MIN                -1.0                                     // min/max the same means infinite, no limit
 //#define A_TRAVEL_MAX                -1.0
-#define A_JERK_MAX                  15
+#define A_JERK_MAX                  75
 #define A_JERK_HIGH_SPEED           A_JERK_MAX
 #define A_HOMING_INPUT              7
 #define A_HOMING_DIRECTION          0
@@ -166,7 +166,7 @@
 #define B_TRAVEL_MAX                370.0
 //#define B_TRAVEL_MIN                -1.0                                     // min/max the same means infinite, no limit
 //#define B_TRAVEL_MAX                -1.0
-#define B_JERK_MAX                  15
+#define B_JERK_MAX                  75
 #define B_JERK_HIGH_SPEED           B_JERK_MAX
 #define B_HOMING_INPUT              7
 #define B_HOMING_DIRECTION          0
