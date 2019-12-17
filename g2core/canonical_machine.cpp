@@ -712,7 +712,8 @@ stat_t cm_get_nxln(nvObj_t *nv)
 
 static float _calc_ABC(const uint8_t axis, const float target[])
 {
-    if ((cm.a[axis].axis_mode == AXIS_STANDARD) || (cm.a[axis].axis_mode == AXIS_INHIBITED)) {
+    if ((cm.a[axis].axis_mode == AXIS_STANDARD) || (cm.a[axis].axis_mode == AXIS_INHIBITED) ||
+        (cm.a[axis].axis_mode == AXIS_RADIUS)) {
         return(target[axis]);    // no mm conversion - it's in degrees
     }
 
