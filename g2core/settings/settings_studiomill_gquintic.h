@@ -26,7 +26,7 @@
  */
 
 #define INIT_MESSAGE "Initializing config for 4-axes Studiomill"
-#define USB_SERIAL_PORTS_EXPOSED   1
+#define USB_SERIAL_PORTS_EXPOSED    1
 #define TEXT_VERBOSITY              TV_VERBOSE              // {tv: TV_SILENT, TV_VERBOSE
 #define COMM_MODE                   JSON_MODE               // {ej: TEXT_MODE, JSON_MODE
 #define XIO_ENABLE_FLOW_CONTROL     FLOW_CONTROL_RTS        // FLOW_CONTROL_OFF, FLOW_CONTROL_XON, FLOW_CONTROL_RTS
@@ -36,9 +36,9 @@
 #define STATUS_REPORT_MIN_MS        200                     // (no JSON) milliseconds - enforces a viable minimum
 #define STATUS_REPORT_INTERVAL_MS   250                     // {si: milliseconds - set $SV=0 to disable
 
-#define STATUS_REPORT_DEFAULTS "line","posx","posy","posz","posa","feed","vel","unit","coor","dist","admo","frmo","momo","stat"
+#define STATUS_REPORT_DEFAULTS "line","posx","posy","posz","posb","feed","vel","unit","coor","dist","admo","frmo","momo","stat"
 // Alternate SRs that report in drawable units
-//#define STATUS_REPORT_DEFAULTS "line","vel","mpox","mpoy","mpoz","mpoa","coor","ofsa","ofsx","ofsy","ofsz","dist","unit","stat","homz","homy","homx","momo"
+//#define STATUS_REPORT_DEFAULTS "line","vel","mpox","mpoy","mpoz","mpob","coor","ofsa","ofsx","ofsy","ofsz","dist","unit","stat","homz","homy","homx","momo"
 
 #define GCODE_DEFAULT_UNITS         MILLIMETERS             // {gun: MILLIMETERS or INCHES
 #define GCODE_DEFAULT_PLANE         CANON_PLANE_XY          // {gpl: CANON_PLANE_XY, CANON_PLANE_XZ, or CANON_PLANE_YZ
@@ -151,8 +151,8 @@
 #define B_JERK_HIGH_SPEED           B_JERK_MAX
 #define B_HOMING_INPUT              7
 #define B_HOMING_DIRECTION          0
-#define B_SEARCH_VELOCITY           1200.0
-#define B_LATCH_VELOCITY            150.0
+#define B_SEARCH_VELOCITY           900.0
+#define B_LATCH_VELOCITY            75.0
 #define B_LATCH_BACKOFF             5.0
 #define B_ZERO_BACKOFF              2.0
 
