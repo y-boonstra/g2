@@ -81,10 +81,9 @@
 #define M3_POWER_LEVEL              0.5
 
 // MOTOR 4
-#define M4_MOTOR_MAP                AXIS_A
+#define M4_MOTOR_MAP                AXIS_B
 #define M4_STEP_ANGLE               1.8
-#define M4_TRAVEL_PER_REV           5.634 // Seems ~reasonably accurate for the Sherline 3700 rotary table
-//#define M4_TRAVEL_PER_REV           5.0 // Estimate from watching the motor vs axis markings
+#define M4_TRAVEL_PER_REV           5.636 // Seems ~reasonably accurate for the Sherline 3700 rotary table
 #define M4_MICROSTEPS               8
 #define M4_STEPS_PER_UNIT           0
 #define M4_POLARITY                 1
@@ -138,24 +137,6 @@
 #define Z_LATCH_VELOCITY            150.0
 #define Z_LATCH_BACKOFF             5.0
 #define Z_ZERO_BACKOFF              2.0
-
-// A AXIS
-#define A_AXIS_MODE                 AXIS_RADIUS
-#define A_RADIUS                    50.8                                      // https://www.sherline.com/product/3700-cnc-cnc-ready-4-rotary-table/
-#define A_VELOCITY_MAX              2000.0
-#define A_FEEDRATE_MAX              A_VELOCITY_MAX
-#define A_TRAVEL_MIN                -370.0                                    // Can't do -1.0 for these, else homing the axis breaks
-#define A_TRAVEL_MAX                370.0
-//#define A_TRAVEL_MIN                -1.0                                     // min/max the same means infinite, no limit
-//#define A_TRAVEL_MAX                -1.0
-#define A_JERK_MAX                  75
-#define A_JERK_HIGH_SPEED           A_JERK_MAX
-#define A_HOMING_INPUT              7
-#define A_HOMING_DIRECTION          0
-#define A_SEARCH_VELOCITY           1200.0
-#define A_LATCH_VELOCITY            150.0
-#define A_LATCH_BACKOFF             5.0
-#define A_ZERO_BACKOFF              2.0
 
 // B AXIS
 #define B_AXIS_MODE                 AXIS_RADIUS
