@@ -58,7 +58,7 @@
 #define M1_STEP_ANGLE               1.8                     // {1sa: degrees per step
 #define M1_TRAVEL_PER_REV           4.0                     // {1tr:  1.25 is a typical value for a screw axis
 #define M1_MICROSTEPS               8                       // {1mi:  1,2,4,8,    16,32 (G2 ONLY)
-#define M1_POLARITY                 1                       // {1po:  0=normal direction, 1=inverted direction
+#define M1_POLARITY                 0                       // {1po:  0=normal direction, 1=inverted direction
 #define M1_POWER_MODE               MOTOR_POWERED_IN_CYCLE  // {1pm:  MOTOR_DISABLED, MOTOR_ALWAYS_POWERED, MOTOR_POWERED_IN_CYCLE, MOTOR_POWERED_ONLY_WHEN_MOVING
 #define M1_POWER_LEVEL              0.5                     // {1pl:   0.0=no power, 1.0=max power
 
@@ -102,7 +102,7 @@
 #define X_JERK_MAX                  500.0                   // {xjm:
 #define X_JERK_HIGH_SPEED           500.0                   // {xjh:
 #define X_HOMING_INPUT              1                       // {xhi:  input used for homing or 0 to disable
-#define X_HOMING_DIRECTION          0                       // {xhd:  0=search moves negative, 1= search moves positive
+#define X_HOMING_DIRECTION          1                       // {xhd:  0=search moves negative, 1= search moves positive
 #define X_SEARCH_VELOCITY           250.0                   // {xsv:  minus means move to minimum switch
 #define X_LATCH_VELOCITY            150.0                   // {xlv:  mm/min
 #define X_LATCH_BACKOFF             5.0                     // {xlb:  mm
