@@ -95,7 +95,7 @@
 
 // X AXIS
 #define X_AXIS_MODE                 AXIS_STANDARD
-#define X_VELOCITY_MAX              3500.0                  // {xvm:  G0 max velocity in mm/min
+#define X_VELOCITY_MAX              1500.0                  // {xvm:  G0 max velocity in mm/min
 #define X_FEEDRATE_MAX              1500.0                  // {xfr:  G1 max feed rate in mm/min
 #define X_TRAVEL_MIN                0.0                     // {xtn:  minimum travel for soft limits
 #define X_TRAVEL_MAX                165.0                   // {xtm:  travel between switches or crashes
@@ -125,7 +125,7 @@
 
 // Z AXIS
 #define Z_AXIS_MODE                 AXIS_STANDARD
-#define Z_VELOCITY_MAX              9500.0
+#define Z_VELOCITY_MAX              1500.0
 #define Z_FEEDRATE_MAX              1500.0
 #define Z_TRAVEL_MIN                -138.0
 #define Z_TRAVEL_MAX                0
