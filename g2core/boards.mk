@@ -24,142 +24,15 @@
 # To choose a CONFIG but apply it to a different BOARD:
 #   make CONFIG=PrintrbotPlus BOARD=g2ref-a
 
-##########
-# V9-based configs:
-
-ifeq ("$(CONFIG)","ShapeokoDualY")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=g2v9k
-    endif
-    SETTINGS_FILE="settings_shapeoko2.h"
-endif
-
-ifeq ("$(CONFIG)","Othermill")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=g2v9k
-    endif
-#    SETTINGS_FILE="settings_othermill.h"
-    SETTINGS_FILE="settings_othermill_test.h"
-endif
-
-ifeq ("$(CONFIG)","ProbotixV90")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=g2v9k
-    endif
-    SETTINGS_FILE="settings_probotixV90.h"
-endif
-
-ifeq ("$(CONFIG)","Zen7x12")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=g2v9k
-    endif
-    SETTINGS_FILE="settings_zen7x12.h"
-endif
-
-ifeq ("$(CONFIG)","Makeblock")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=g2v9k
-    endif
-    SETTINGS_FILE="settings_makeblock.h"
-endif
-
-ifeq ("$(CONFIG)","TestV9")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=g2v9k
-    endif
-    SETTINGS_FILE="settings_test.h"
-endif
-
-ifeq ("$(CONFIG)","TestQuintic")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=gquintic-b
-    endif
-    SETTINGS_FILE="settings_test.h"
-endif
-
-
-ifeq ("$(CONFIG)","TestQuadratic")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=gquadratic-b
-    endif
-    SETTINGS_FILE="settings_test.h"
-endif
-
-##########
-# Shopbot configs:
-
-ifeq ("$(CONFIG)","sbv300")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=sbv300
-    endif
-    SETTINGS_FILE="settings_shopbot_sbv300.h"
-endif
-
-ifeq ("$(CONFIG)","ShopbotTestV9")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=g2v9k
-    endif
-    SETTINGS_FILE="settings_shopbot_test.h"
-endif
-
-##########
-# PrintrBot configs:
-
-ifeq ("$(CONFIG)","PrintrbotPlus")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=printrboardG2v3
-    endif
-    SETTINGS_FILE="settings_Printrbot_Plus.h"
-endif
-
-ifeq ("$(CONFIG)","PrintrbotSimple1403")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=printrboardG2v3
-    endif
-    SETTINGS_FILE="settings_Printrbot_Simple_1403.h"
-endif
-
-ifeq ("$(CONFIG)","PrintrbotSimple1608")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=printrboardG2v3
-    endif
-    SETTINGS_FILE="settings_Printrbot_Simple_1608.h"
-endif
-
-ifeq ("$(CONFIG)","PrintrbotPlay")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=printrboardG2v3
-    endif
-    SETTINGS_FILE="settings_Printrbot_Play.h"
-endif
-
-##########
-# Ultimaker configs:
-
-ifeq ("$(CONFIG)","Ultimakerv9k")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=g2v9k
-    endif
-    SETTINGS_FILE="settings_ultimaker.h"
-endif
-
-##########
-# EMSL configs:
-
-ifeq ("$(CONFIG)","WaterColorBotv2")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=gquadratic-b
-    endif
-    SETTINGS_FILE="settings_watercolorbot_v2.h"
-endif
-
-ifeq ("$(CONFIG)","EggBot")
-    ifeq ("$(BOARD)","NONE")
-        BOARD=gquadratic-b
-    endif
-    SETTINGS_FILE="settings_eggbot.h"
-endif
-
 
 include $(wildcard ./board/$(STAR).mk)
 
+##########
+# Custom Djuke board config:
+
+ifeq ("$(CONFIG)","Djuke_board")
+    ifeq ("$(BOARD)","NONE")
+        BOARD=gshield
+    endif
+    SETTINGS_FILE="settings_Djuke_test.h"
+endif

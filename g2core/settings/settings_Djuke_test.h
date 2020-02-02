@@ -49,16 +49,16 @@
 #define SPINDLE_PAUSE_ON_HOLD       true
 #define SPINDLE_DWELL_TIME          1.0
 
-#define P1_PWM_FREQUENCY 100  // in Hz
-#define P1_CW_SPEED_LO 1      // in percent (arbitrary units)
-#define P1_CW_SPEED_HI 100
-#define P1_CW_PHASE_LO 0.01  // phase [0..1]
-#define P1_CW_PHASE_HI 1.0
-#define P1_CCW_SPEED_LO 1
-#define P1_CCW_SPEED_HI 100
-#define P1_CCW_PHASE_LO 0.01
-#define P1_CCW_PHASE_HI 1.0
-#define P1_PWM_PHASE_OFF 0.0
+#define P1_PWM_FREQUENCY            100                     // in Hz
+#define P1_CW_SPEED_LO              1                       // in percent (arbitrary units)
+#define P1_CW_SPEED_HI              100
+#define P1_CW_PHASE_LO              0.01                    // phase [0..1]
+#define P1_CW_PHASE_HI              1.0
+#define P1_CCW_SPEED_LO             1
+#define P1_CCW_SPEED_HI             100
+#define P1_CCW_PHASE_LO             0.01
+#define P1_CCW_PHASE_HI             1.0
+#define P1_PWM_PHASE_OFF            0.0
 
 // Coolant settings
 #define COOLANT_MIST_POLARITY       1                       // 0=active low, 1=active high
@@ -100,7 +100,7 @@
 
 #define M1_MOTOR_MAP                AXIS_X_EXTERNAL         // 1ma
 #define M1_STEP_ANGLE               1.8                     // 1sa
-#define M1_TRAVEL_PER_REV           1.00                    // 1tr
+#define M1_TRAVEL_PER_REV           42.99                   // 1tr
 #define M1_MICROSTEPS               8                       // 1mi  1,2,4,8,16,32
 #define M1_POLARITY                 0                       // 1po  0=normal, 1=reversed
 #define M1_POWER_MODE               MOTOR_POWER_MODE        // 1pm  TRUE=low power idle enabled
@@ -108,7 +108,7 @@
 
 #define M2_MOTOR_MAP                AXIS_Y_EXTERNAL
 #define M2_STEP_ANGLE               1.8
-#define M2_TRAVEL_PER_REV           1.00
+#define M2_TRAVEL_PER_REV           42.99
 #define M2_MICROSTEPS               8
 #define M2_POLARITY                 0
 #define M2_POWER_MODE               MOTOR_POWER_MODE
@@ -239,11 +239,13 @@
     IO_MODE_DISABLED
     IO_ACTIVE_LOW    aka NORMALLY_OPEN
     IO_ACTIVE_HIGH   aka NORMALLY_CLOSED
+
     INPUT_ACTION_NONE
     INPUT_ACTION_STOP
     INPUT_ACTION_FAST_STOP
     INPUT_ACTION_HALT
     INPUT_ACTION_RESET
+
     INPUT_FUNCTION_NONE
     INPUT_FUNCTION_LIMIT
     INPUT_FUNCTION_INTERLOCK
@@ -315,3 +317,4 @@
 #define G54_X_OFFSET 0    // G54 work offset
 #define G54_Y_OFFSET 0
 #define G54_Z_OFFSET 0
+

@@ -234,15 +234,8 @@ static stat_t _homing_axis_start(int8_t axis) {
         return (_homing_error_exit(axis, STAT_HOMING_ERROR_ZERO_LATCH_VELOCITY));
     }
 
-    // Calculate and test travel distance
-    float travel_distance;
-    if ((fabs(cm->a[axis].travel_max - cm->a[axis].travel_min) < EPSILON) && (cm->a[axis].axis_mode == AXIS_RADIUS)) {
-        // For cyclic rotary axes, we set the travel distance to one full rotation
-        travel_distance = 360.0;
-    } else {
-        // All other axes use a calculated value
-        travel_distance = fabs(cm->a[axis].travel_max - cm->a[axis].travel_min) + cm->a[axis].latch_backoff;
-    }
+    // calculate and test travel distance
+    float travel_distance = fabs(cm->a[axis].travel_max - cm->a[axis].travel_min) + cm->a[axis].latch_backoff;
     if (fp_ZERO(travel_distance)) {
         return (_homing_error_exit(axis, STAT_HOMING_ERROR_TRAVEL_MIN_MAX_IDENTICAL));
     }
@@ -454,12 +447,6 @@ static int8_t _get_next_axis(int8_t axis) {
         if (hm.axis_flags[AXIS_A]) {
             return (AXIS_A);
         }
-        if (hm.axis_flags[AXIS_B]) {
-            return (AXIS_B);
-        }
-        if (hm.axis_flags[AXIS_C]) {
-            return (AXIS_C);
-        }
         return (-2);  // error
     } else if (axis == AXIS_Z) {
         if (hm.axis_flags[AXIS_X]) {
@@ -471,12 +458,6 @@ static int8_t _get_next_axis(int8_t axis) {
         if (hm.axis_flags[AXIS_A]) {
             return (AXIS_A);
         }
-        if (hm.axis_flags[AXIS_B]) {
-            return (AXIS_B);
-        }
-        if (hm.axis_flags[AXIS_C]) {
-            return (AXIS_C);
-        }
     } else if (axis == AXIS_X) {
         if (hm.axis_flags[AXIS_Y]) {
             return (AXIS_Y);
@@ -484,21 +465,9 @@ static int8_t _get_next_axis(int8_t axis) {
         if (hm.axis_flags[AXIS_A]) {
             return (AXIS_A);
         }
-        if (hm.axis_flags[AXIS_B]) {
-            return (AXIS_B);
-        }
-        if (hm.axis_flags[AXIS_C]) {
-            return (AXIS_C);
-        }
     } else if (axis == AXIS_Y) {
         if (hm.axis_flags[AXIS_A]) {
             return (AXIS_A);
-        }
-        if (hm.axis_flags[AXIS_B]) {
-            return (AXIS_B);
-        }
-        if (hm.axis_flags[AXIS_C]) {
-            return (AXIS_C);
         }
     }
     return (-1);  // done
