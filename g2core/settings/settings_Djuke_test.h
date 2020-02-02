@@ -106,25 +106,25 @@
 #define M1_POWER_MODE               MOTOR_POWER_MODE        // 1pm  TRUE=low power idle enabled
 #define M1_POWER_LEVEL              MOTOR_POWER_LEVEL		// 1pl	Irrelevant for external drivers
 
-#define M2_MOTOR_MAP                AXIS_Y_EXTERNAL
+#define M2_MOTOR_MAP                AXIS_X_EXTERNAL
 #define M2_STEP_ANGLE               1.8
 #define M2_TRAVEL_PER_REV           42.99
 #define M2_MICROSTEPS               8
-#define M2_POLARITY                 0
+#define M2_POLARITY                 1
 #define M2_POWER_MODE               MOTOR_POWER_MODE
 #define M2_POWER_LEVEL              MOTOR_POWER_LEVEL
 
-#define M3_MOTOR_MAP                AXIS_Z_EXTERNAL
+#define M3_MOTOR_MAP                AXIS_Y_EXTERNAL			
 #define M3_STEP_ANGLE               1.8
-#define M3_TRAVEL_PER_REV           1.0
+#define M3_TRAVEL_PER_REV           42.99
 #define M3_MICROSTEPS               8
 #define M3_POLARITY                 0
 #define M3_POWER_MODE               MOTOR_POWER_MODE
 #define M3_POWER_LEVEL              MOTOR_POWER_LEVEL
 
-#define M4_MOTOR_MAP                AXIS_A_EXTERNAL
+#define M4_MOTOR_MAP                AXIS_Z_EXTERNAL			// Tr8*8-2p acme tread 2mm pith 8mm lead
 #define M4_STEP_ANGLE               1.8
-#define M4_TRAVEL_PER_REV           1.00
+#define M4_TRAVEL_PER_REV           2.00
 #define M4_MICROSTEPS               8
 #define M4_POLARITY                 0
 #define M4_POWER_MODE               MOTOR_POWER_MODE
